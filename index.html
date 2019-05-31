@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -14,86 +16,87 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    
     <title>GoT Battle Game</title>
 </head>
 
 <body>
+
     <h1>Choose your fighter!</h1>
+
+    <div id="musicControls" class="text-center">
+        <button class="btn btn-warning btn-xs theme-button">
+            <span class="fa fa-music"></span> Play Theme Song</button>
+        <button class="btn btn-dark btn-xs pause-button">
+            <span class="fa fa-pause"></span> Pause Theme Song</button>
+    </div>
+
+    <br>
+
 
 
     <div class="container">
         <div class="row">
             <!-- Jon Snow Card -->
-            <div class="card col-lg-3" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
                 <img src="./images/jon-snow.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Jon Snow- the bastard of winterfell. killed his gf, has come back from the
-                        dead</p>
+                    <p class="card-text">Jon</p>
+                    <p class="card-text">Health -</p>
+                    <p class="card-text">Attack -</p>
+                    <p class="card-text">Counter Attack -</p>
                 </div>
             </div>
-
             <!-- Jamie Lannister card -->
-            <div>
-                <div class="card col-lg-3" style="width: 18rem;">
-                    <img src="./images/jamie-lannister.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Jamie Lannister- the kingslayer. has sex with his sister. renowed swordsman,
-                            with his right hand. doesn't have right hand anymore.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- night king card -->
-        </div>
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="./images/night-king.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Night King. lord of the dead. immortal. has army of zombies.</p>
-            </div>
-        </div>
-        <!-- Khal Drogo card -->
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="./images/khal-drogo.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Khal Drogo. ruler of the dothraki, daenerys's baby daddy, pretty scary</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <!-- Cerci Lannistewr -->
-            <div class="card col-sm-3" style="width: 18rem;">
-                <img src="./images/cerci-lannister.jpg" class="card-img-top" alt="...">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
+                <img src="./images/jamie-lannister.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Cerci Lannister- evil af.  queen mother.  will do whatever for power.</p>
+                    <p class="card-text">Jamie</p>
+                    <p class="card-text">Health -</p>
+                    <p class="card-text">Attack -</p>
+                    <p class="card-text">Counter Attack -</p>
                 </div>
             </div>
-            <!-- the hound card -->
-            <div class="card col-sm-3" style="width: 18rem;">
-                <img src="./images/thehound.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Sandor Clegane. the hound, rugged af, certified badass</p>
-                </div>
-                <!-- Daenerys Targaryen card -->
-            </div>
-            <div class="card col-sm-3" style="width: 18rem;">
+            <!-- Daenerys Targaryen card -->
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
                 <img src="./images/daenerys.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Daenerys Targaryen. mother of dragons, breaker of chains, khaleesi, etc...
+                    <p class="card-text">Daenerys
                     </p>
+                    <p class="card-text">Health -</p>
+                    <p class="card-text">Attack -</p>
+                    <p class="card-text">Counter Attack -</p>
                 </div>
             </div>
             <!-- Arya Stark card -->
-            <div class="card col-sm-3" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
                 <img src="./images/arya_stark.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Arya Stark. mvp of the battle of winterfell.  has no name.  will kill you.</p>
+                    <p class="card-text">Arya
+                    </p>
+                    <p class="card-text">Health -</p>
+                    <p class="card-text">Attack -</p>
+                    <p class="card-text">Counter Attack -</p>
                 </div>
             </div>
         </div>
-    </div>
-  
+        
+        
+        <h2 id="yourfighter">Your Fighter</h2>
+
+<!-- Battle area -->
+     <div class="container shadow p-3 mb-5 bg-black rounded">
+
+        
+     </div>
+
+     <!-- fight button -->
+     <button type="fightbutton" class="btn btn-danger">Fight!</button>
+    
+
+
+
+
 
 </body>
 
