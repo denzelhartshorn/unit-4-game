@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="./styles.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -16,88 +17,84 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
+
     <title>GoT Battle Game</title>
 </head>
 
 <body>
 
     <h1>Choose your fighter!</h1>
-
     <div id="musicControls" class="text-center">
         <button class="btn btn-warning btn-xs theme-button">
             <span class="fa fa-music"></span> Play Theme Song</button>
         <button class="btn btn-dark btn-xs pause-button">
             <span class="fa fa-pause"></span> Pause Theme Song</button>
     </div>
-
     <br>
-
-
 
     <div class="container">
         <div class="row">
             <!-- Jon Snow Card -->
-            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;" id="jonsnowCard">
                 <img src="./images/jon-snow.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Jon</p>
-                    <p class="card-text">Health -</p>
-                    <p class="card-text">Attack -</p>
-                    <p class="card-text">Counter Attack -</p>
+                    <!-- copy this to all characters  -->
+                    <p class="card-text">Health - <span id="jonHealth"> 130</span></p>
+                    <p class="card-text" id="jonAttack">Attack - 22</p>
                 </div>
             </div>
             <!-- Jamie Lannister card -->
-            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;" id="jamieCard">
                 <img src="./images/jamie-lannister.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Jamie</p>
-                    <p class="card-text">Health -</p>
-                    <p class="card-text">Attack -</p>
-                    <p class="card-text">Counter Attack -</p>
+                    <p class="card-text">Health - <span id="jamieHealth"> 120</span></p>
+                    <p class="card-text" id="jamieAttack">Attack - 29<p>
                 </div>
             </div>
             <!-- Daenerys Targaryen card -->
-            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;" id="daenerysCard">
                 <img src="./images/daenerys.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">Daenerys
                     </p>
-                    <p class="card-text">Health -</p>
-                    <p class="card-text">Attack -</p>
-                    <p class="card-text">Counter Attack -</p>
+                    <p class="card-text">Health - <span id="daenerysHealth"> 100</span></p>
+                    <p class="card-text" id="daenerysAttack">Attack - 27</p>
                 </div>
             </div>
             <!-- Arya Stark card -->
-            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;">
+            <div class="card col-sm-3 shadow p-3 mb-5 bg-black rounded" style="width: 18rem;" id="aryaCard">
                 <img src="./images/arya_stark.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Arya
-                    </p>
-                    <p class="card-text">Health -</p>
-                    <p class="card-text">Attack -</p>
-                    <p class="card-text">Counter Attack -</p>
+                    <p class="card-text">Arya</p>
+                    <p class="card-text">Health - <span id="aryaHealth"> 100</span></p>
+                    <p class="card-text" id="aryaAttack">Attack - 28</p>
                 </div>
             </div>
         </div>
-        
-        
-        <h2 id="yourfighter">Your Fighter</h2>
-
-<!-- Battle area -->
-     <div class="container shadow p-3 mb-5 bg-black rounded">
-
-        
-     </div>
-
-     <!-- fight button -->
-     <button type="fightbutton" class="btn btn-danger">Fight!</button>
-    
 
 
+        <h2 id="yourfighter">Battle Arena</h2>
 
+        <!-- select fighter function -->
 
+        <!-- Battle area -->
+        <div class="container shadow p-3 mb-5 bg-black rounded">
+           <div class="row">
+               <div class="col-sm-6">
+                    <div class="fighterSpot"><h3>Your Fighter</h3></div>
+               </div>
+               <div class="col-sm-6">
+                    <div class="opponentSpot"><h3>Your Opponent</h3></div>
+               </div>
+                
+           </div>
+        </div>
 
+        <!-- fight button -->
+        <button id="fightbutton" class="btn btn-danger">Fight!</button>
+        <script src="./JavaScript/game.js"></script>
 </body>
 
 </html>
