@@ -41,9 +41,19 @@ var currentOponent = '';
 // Win game alert
 var killCount = 0
 
+let showFightButton = function(){
+    if(currentOponent === ''){
+        $('#fightbutton').hide()
+    } else {
+        $('#fightbutton').show()
+    }
+}
+
 $(document).ready(function () {
+    showFightButton()
     // select your fighter & move to battle area function
     $("#jonsnowCard").on("click", function () {
+        $(jonsnowCard).removeClass('col-sm-3')
         if (currentFighter === '') {
             $('.fighterSpot').append(jonsnowCard)
             currentFighter = jon
@@ -55,6 +65,7 @@ $(document).ready(function () {
     })
 
     $("#jamieCard").on("click", function () {
+        $(jamieCard).removeClass('col-sm-3')
         $('.fighterSpot').append(jamieCard)
         if (currentFighter === '') {
             $('.fighterSpot').append(jamieCard)
@@ -65,9 +76,11 @@ $(document).ready(function () {
             // below will clear html in opponent container
             currentOponent = jamie
         }
-
+        showFightButton()
     })
+
     $("#daenerysCard").on("click", function () {
+        $(daenerysCard).removeClass('col-sm-3')
         $('.fighterSpot').append(daenerysCard)
         if (currentFighter === '') {
             $('.fighterSpot').append(daenerysCard)
@@ -77,8 +90,11 @@ $(document).ready(function () {
             $('.opponentSpot').append(daenerysCard)
             currentOponent = daenerys
         }
+        showFightButton()
     })
+
     $("#aryaCard").on("click", function () {
+        $(aryaCard).removeClass('col-sm-3')
         $('.fighterSpot').append(aryaCard)
         if (currentFighter === '') {
             $('.fighterSpot').append(aryaCard)
@@ -88,6 +104,7 @@ $(document).ready(function () {
             $('.opponentSpot').append(aryaCard)
             currentOponent = arya
         }
+        showFightButton()
     })
 
 
@@ -112,12 +129,29 @@ $(document).ready(function () {
             $('#daenerysHealth').text(currentFighter.Health)
         }
 
+        if (currentOponent.Name === 'jon') {
+            $('#jonHealth').text(currentOponent.Health)
+        } 
+        if (currentOponent.Name === 'arya') {
+            $('#aryaHealth').text(currentOponent.Health)
+        } 
+        if (currentOponent.Name === 'jamie') {
+            $('#jamieHealth').text(currentOponent.Health)
+        } 
+        if (currentOponent.Name === 'daenerys') {
+            $('#daenerysHealth').text(currentOponent.Health)
+        }
 
         if (currentFighter.Health < 0) {
             alert('you have lost, how does that make you feel')
             // added this in to try and reset fighter health after defeating opponent
         } 
+
         if (currentOponent.Health < 0) {
+            if(currentFighter.Name == 'jon'){
+                currentFighter.Health = 130
+            }
+            $('#jonHealth').text(currentFighter.Health)
             $('.opponentSpot').html("")
             killCount++
             alert('you have defeated your opponent, select a new fighter')

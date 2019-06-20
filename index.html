@@ -22,12 +22,12 @@
 </head>
 
 <body>
-
+    <audio id="player" src="https://nf1f8200-a.akamaihd.net/downloads/ringtones/files/mp3/game-of-thrones-theme-song-ringtone-30782.mp3"></audio>
     <h1>Choose your fighter!</h1>
     <div id="musicControls" class="text-center">
-        <button class="btn btn-warning btn-xs theme-button">
+        <button class="btn btn-warning btn-xs theme-button" onclick="document.getElementById('player').play()">
             <span class="fa fa-music"></span> Play Theme Song</button>
-        <button class="btn btn-dark btn-xs pause-button">
+        <button class="btn btn-dark btn-xs pause-button" onclick="document.getElementById('player').pause()">
             <span class="fa fa-pause"></span> Pause Theme Song</button>
     </div>
     <br>
@@ -73,20 +73,19 @@
                 </div>
             </div>
         </div>
-
-
         <h2 id="yourfighter">Battle Arena</h2>
-
         <!-- select fighter function -->
 
         <!-- Battle area -->
         <div class="container shadow p-3 mb-5 bg-black rounded">
            <div class="row">
                <div class="col-sm-6">
-                    <div class="fighterSpot"><h3>Your Fighter</h3></div>
+                    <h3>Your Fighter</h3>
+                    <div class="fighterSpot"></div>
                </div>
                <div class="col-sm-6">
-                    <div class="opponentSpot"><h3>Your Opponent</h3></div>
+                    <h3>Your Opponent</h3>
+                    <div class="opponentSpot"></div>
                </div>
                 
            </div>
